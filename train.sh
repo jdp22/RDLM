@@ -1,0 +1,10 @@
+CUDA_VISIBLE_DEVICES=1 python main.py \
+  ngpus=1 \
+  training.accum=1 \
+  exp=text8 \
+  sde=mixture \
+  sde.step_thr=0.35 \
+  scheduler=geometric \
+  scheduler.weight_type=step \
+  scheduler.left=0.3 \
+  scheduler.right=0.6
